@@ -18,7 +18,12 @@
 @import "bootstrap";
 
 body {
-	background: #AA4847;
+	height: 100%;
+  background-image: url("background7.jpg");
+  background-size: 110% 110%;
+  font-family: 'Lato', sans-serif;
+  font-color: gray;
+  font-weight: bold;
 }
 
 .review_title {

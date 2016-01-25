@@ -1,18 +1,20 @@
-<% if !user_signed_in? %>
-	<div class="jumbotron">
-		<h1>Your favorite movies reviewed</h1>
-		<p> Thanks for visiting my site. Here, we review various movies. This app was built using Ruby on Rails and is saved on my Github account.</p>
-		<p><%= link_to "Sign Up to Write a Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
-	</div>
-<% end %>
-
-
-<div class="row">
-	<% @movies.each do |movie| %>
-		<div class="col-sm-6 col-md-3">
-			<div class="thumbnail">
-				<%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
-			</div>
+<body>
+		<% if !user_signed_in? %>
+		<div class="jumbotron">
+			<h1>Plugged In: Movie Reviews</h1>
+			<p> This app was built using Ruby on Rails and is saved on Erin U-C's Github account.</p>
+			<p><%= link_to "Sign Up to Write a Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
 		</div>
 	<% end %>
-</div>
+
+
+	<div class="row">
+		<% @movies.each do |movie| %>
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail">
+					<%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</body>
